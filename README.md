@@ -12,6 +12,8 @@ Theo project `TvcLesson08Models` trong repo thầy: https://github.com/tvchung/k
 - Chỉnh sửa bằng GET/POST.
 - Xác nhận và xóa bằng GET/POST.
 - Validation và Anti-forgery token.
+- **Quản lý sinh viên:** danh sách và form thêm mới sinh viên.
+- Kiểm tra trùng mã sinh viên, email, số điện thoại và ngày sinh.
 
 ## URL
 - `/TvcMember`

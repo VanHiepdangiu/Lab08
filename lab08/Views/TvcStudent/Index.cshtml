@@ -1,0 +1,15 @@
+@model IEnumerable<lab08.Models.TvcStudent>
+@{ ViewData["Title"]="Danh sách sinh viên"; }
+<div class="card p-3 shadow-sm">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="h3">@ViewData["Title"]</h1>
+        <a asp-action="Create" class="btn btn-primary">Thêm mới sinh viên</a>
+    </div>
+    @if (TempData["Message"] != null) { <div class="alert alert-success">@TempData["Message"]</div> }
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead><tr><th>STT</th><th>Mã SV</th><th>Họ tên</th><th>Lớp</th><th>Email</th><th>Điện thoại</th><th>Ngày sinh</th></tr></thead>
+        <tbody>@{var stt=0;} @foreach(var item in Model){stt++;<tr><td>@stt</td><td>@item.StudentCode</td><td>@item.FullName</td><td>@item.ClassName</td><td>@item.Email</td><td>@item.Phone</td><td>@item.DateOfBirth.ToString("dd/MM/yyyy")</td></tr>}</tbody>
+    </table>
+    </div>
+</div>
